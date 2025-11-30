@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Health Check & Growth Accelerator | Matrix Intelligence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>MATRIX INTELLIGENCE</h1>
+                <span>Website Health Check</span>
+            </div>
+            <nav class="nav">
+                <a href="#health-check" class="nav-link active">🔍 Website Health</a>
+                <a href="#global-impact" class="nav-link">🌍 Global Reach</a>
+                <a href="#usdt-payment" class="nav-link">💎 USDT Payment</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="health-check">
+        <div class="container">
+            <h1>Website Health Check & <span class="accent">Growth Accelerator</span></h1>
+            <p class="subtitle">Discover hidden growth opportunities with our 5-layer website technological audit. Pay only in USDT after seeing results.</p>
+            
+            <!-- Diagnosis Matrix -->
+            <div class="diagnosis-matrix">
+                <div class="diagnosis-pillar">
+                    <div class="pillar-icon">🛡️</div>
+                    <h4>Website Immunity</h4>
+                    <p>Security & Stability Audit</p>
+                </div>
+                <div class="diagnosis-pillar">
+                    <div class="pillar-icon">🧬</div>
+                    <h4>SEO-DNA Analysis</h4>
+                    <p>Search Effectiveness Genetics</p>
+                </div>
+                <div class="diagnosis-pillar">
+                    <div class="pillar-icon">💸</div>
+                    <h4>Traffic Metabolism</h4>
+                    <p>Conversion & Leakage Diagnosis</p>
+                </div>
+                <div class="diagnosis-pillar">
+                    <div class="pillar-icon">🥊</div>
+                    <h4>Competitive Genome</h4>
+                    <p>Industry Leaders DNA Decoding</p>
+                </div>
+                <div class="diagnosis-pillar">
+                    <div class="pillar-icon">📈</div>
+                    <h4>Growth Scenario</h4>
+                    <p>Personal Scaling Roadmap</p>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="cta-buttons">
+                <button class="btn-primary" onclick="requestWebsiteHealthScore()">Get Free Website Health Score</button>
+                <button class="btn-outline" onclick="scrollToSection('usdt-payment')">USDT Payment Info</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Impact Section -->
+    <section class="global-impact" id="global-impact">
+        <div class="container">
+            <h2>🌍 Transforming 600 Businesses Worldwide</h2>
+            <div class="global-grid">
+                <div class="country-card">
+                    <h4>🇺🇸 United States</h4>
+                    <p>100 companies · $1.2M potential</p>
+                    <span>Tech, Retail, HealthTech</span>
+                </div>
+                <div class="country-card">
+                    <h4>🇩🇪 Germany</h4>
+                    <p>100 companies · €900k potential</p>
+                    <span>Engineering, SaaS, Manufacturing</span>
+                </div>
+                <div class="country-card">
+                    <h4>🇬🇧 United Kingdom</h4>
+                    <p>100 companies · £800k potential</p>
+                    <span>Finance, Tech, Consulting</span>
+                </div>
+                <div class="country-card">
+                    <h4>🇫🇷 France</h4>
+                    <p>100 companies · €850k potential</p>
+                    <span>Luxury, Fashion, Wine</span>
+                </div>
+                <div class="country-card">
+                    <h4>🇳🇱 Netherlands</h4>
+                    <p>100 companies · €800k potential</p>
+                    <span>Logistics, Tech, E-commerce</span>
+                </div>
+                <div class="country-card">
+                    <h4>🇨🇭 Switzerland</h4>
+                    <p>100 companies · CHF 900k potential</p>
+                    <span>Finance, Pharma, Precision</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USDT Payment Section -->
+    <section class="global-payment" id="usdt-payment">
+        <div class="container">
+            <h2>💎 Global Payments in USDT (TRC20)</h2>
+            
+            <div class="payment-content">
+                <div class="payment-info">
+                    <h3>💎 USDT (TRC20) Payments Only</h3>
+                    <p>No registration, no verification, no bureaucracy. Global payments accepted instantly.</p>
+                    
+                    <div class="payment-steps">
+                        <div class="payment-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Request Demo Report</strong>
+                                <p>Get comprehensive market analysis sample</p>
+                            </div>
+                        </div>
+                        <div class="payment-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Review Insights Quality</strong>
+                                <p>Verify relevance and depth for your business</p>
+                            </div>
+                        </div>
+                        <div class="payment-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Pay with USDT</strong>
+                                <p>Only if satisfied with demo quality</p>
+                            </div>
+                        </div>
+                        <div class="payment-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Receive Full PDF Reports</strong>
+                                <p>Complete analysis delivered within 24h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- USDT ADDRESS AND QR-CODE -->
+                    <div class="usdt-payment-container">
+                        <div class="usdt-address">
+                            <label>Send USDT (TRC20) to:</label>
+                            <div class="address-box">
+                                <code id="usdt-address">TGvyTtKBiSY5RHsfWipRdTjpWroeQSGLTC</code>
+                                <button class="btn-copy" onclick="copyAddress()">Copy</button>
+                            </div>
+                            <small>Network: TRC20 (Tron) | Minimum: $199</small>
+                        </div>
+
+                        <div class="qr-code">
+                            <img src="images/qr-usdt-trc20.png" alt="USDT QR Code" class="qr-image">
+                            <p>Scan to pay with USDT (TRC20)</p>
+                            <small>Address: TGvyTtKBiSY5RHsfWipRdTjpWroeQSGLTC</small>
+                        </div>
+                    </div>
+
+                    <!-- Currency Disclaimer -->
+                    <div class="currency-disclaimer">
+                        <p class="disclaimer-text">
+                            <small>
+                                *Amounts in local currencies are approximate. 
+                                Actual cost during conversion may vary slightly 
+                                depending on current market rates at the time of payment. 
+                                Fixed service price is 199 USDT.
+                            </small>
+                        </p>
+                    </div>
+
+                    <!-- PAYMENT CONFIRMATION BUTTON -->
+                    <div class="payment-confirmation">
+                        <button class="btn-confirm" onclick="showConfirmationForm()">
+                            ✅ I've Paid - Send Full Report
+                        </button>
+                        <p class="confirmation-note">After payment, click to receive your full analysis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Health Score Calculator -->
+    <section class="health-score-section">
+        <div class="container">
+            <h2>📊 Instant Website Health Score Analysis</h2>
+            <div class="health-score-widget">
+                <div class="score-input">
+                    <input type="url" placeholder="Enter your website URL" id="website-url">
+                    <button class="btn-primary" onclick="calculateWebsiteHealthScore()">Analyze Website</button>
+                </div>
+                <div class="score-result" id="score-result">
+                    <div class="score-display">
+                        <span class="score">-/-</span>
+                        <span class="label">Website Health Score</span>
+                    </div>
+                    <div class="score-breakdown">
+                        <div class="metric">
+                            <span class="metric-name">Performance</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" data-value="0"></div>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-name">SEO</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" data-value="0"></div>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-name">Security</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" data-value="0"></div>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-name">Conversion</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" data-value="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Matrix Intelligence</h3>
+                    <p>Where data becomes strategy</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 digitaleng.contact@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Matrix Intelligence. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
