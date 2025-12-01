@@ -17,8 +17,9 @@
             </div>
             <nav class="nav">
                 <a href="#health-check" class="nav-link active">🔍 Website Health</a>
-                <a href="#global-impact" class="nav-link">🌍 Global Reach</a>
-                <a href="#usdt-payment" class="nav-link">💎 USDT Payment</a>
+                <a href="#pricing" class="nav-link">💎 Pricing</a>
+                <a href="#process" class="nav-link">📋 Process</a>
+                <a href="#usdt-payment" class="nav-link">💰 Payment</a>
             </nav>
         </div>
     </header>
@@ -26,8 +27,8 @@
     <!-- Hero Section -->
     <section class="hero" id="health-check">
         <div class="container">
-            <h1>Website Health Check & <span class="accent">Growth Accelerator</span></h1>
-            <p class="subtitle">Discover hidden growth opportunities with our 5-layer website technological audit. Pay only in USDT after seeing results.</p>
+            <h1>Website Health Check & <span class="accent">Quantum Growth Leap</span></h1>
+            <p class="subtitle">Get professional website diagnosis first — pay only after receiving full report. 0 risk.</p>
             
             <!-- Diagnosis Matrix -->
             <div class="diagnosis-matrix">
@@ -60,46 +61,116 @@
 
             <!-- CTA Buttons -->
             <div class="cta-buttons">
-                <button class="btn-primary" onclick="requestWebsiteHealthScore()">Get Free Website Health Score</button>
-                <button class="btn-outline" onclick="scrollToSection('usdt-payment')">USDT Payment Info</button>
+                <button class="btn-primary" onclick="requestDemoReport()">Get Free Demo Report</button>
+                <button class="btn-outline" onclick="scrollToSection('pricing')">View Pricing</button>
             </div>
         </div>
     </section>
 
-    <!-- Global Impact Section -->
-    <section class="global-impact" id="global-impact">
+    <!-- Demo Report Section -->
+    <section class="demo-section" id="demo">
         <div class="container">
-            <h2>🌍 Transforming 600 Businesses Worldwide</h2>
-            <div class="global-grid">
-                <div class="country-card">
-                    <h4>🇺🇸 United States</h4>
-                    <p>100 companies · $1.2M potential</p>
-                    <span>Tech, Retail, HealthTech</span>
+            <h2>🚀 See Value First - Pay After</h2>
+            <p class="section-subtitle">Get personalized demo report showing actual findings from your website</p>
+            
+            <div class="demo-request">
+                <div class="demo-input">
+                    <input type="url" placeholder="Enter your website URL (e.g., https://example.com)" id="website-url">
+                    <button class="btn-primary" onclick="generateDemoReport()">Generate Free Demo</button>
                 </div>
-                <div class="country-card">
-                    <h4>🇩🇪 Germany</h4>
-                    <p>100 companies · €900k potential</p>
-                    <span>Engineering, SaaS, Manufacturing</span>
+                <div class="demo-note">
+                    <p>💡 We'll create a personalized demo report showing 3-4 critical issues found on your site.</p>
                 </div>
-                <div class="country-card">
-                    <h4>🇬🇧 United Kingdom</h4>
-                    <p>100 companies · £800k potential</p>
-                    <span>Finance, Tech, Consulting</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2>💎 Professional Diagnostic Packages</h2>
+            <p class="section-subtitle">Choose the level of analysis that matches your needs</p>
+            
+            <div class="pricing-matrix">
+                <!-- BASIC PLAN -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>BASIC</h3>
+                        <div class="price">$97<span>/one-time</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ Personal demo report with critical issues</li>
+                        <li>✅ Complete diagnostic analysis in PDF</li>
+                        <li>✅ Identification of key growth points</li>
+                        <li>✅ Priority improvement recommendations</li>
+                        <li>✅ Text analysis with analytical graphics</li>
+                    </ul>
+                    <button class="btn-outline" onclick="selectPlan('basic')">Choose Basic</button>
                 </div>
-                <div class="country-card">
-                    <h4>🇫🇷 France</h4>
-                    <p>100 companies · €850k potential</p>
-                    <span>Luxury, Fashion, Wine</span>
+
+                <!-- PREMIUM PLAN -->
+                <div class="plan-card featured">
+                    <div class="plan-header">
+                        <h3>PREMIUM</h3>
+                        <div class="price">$247<span>/one-time</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ Extended demo with competitive analysis elements</li>
+                        <li>✅ Comprehensive diagnostic report in PDF</li>
+                        <li>✅ Professional presentation of results</li>
+                        <li>✅ Competitive environment analysis</li>
+                        <li>✅ Detailed action plan</li>
+                        <li>✅ Improvement potential calculation</li>
+                    </ul>
+                    <button class="btn-primary" onclick="selectPlan('premium')">Choose Premium</button>
                 </div>
-                <div class="country-card">
-                    <h4>🇳🇱 Netherlands</h4>
-                    <p>100 companies · €800k potential</p>
-                    <span>Logistics, Tech, E-commerce</span>
+
+                <!-- ELITE PLAN -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>ELITE</h3>
+                        <div class="price">$497<span>/one-time</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ Deep demo with full competitive analysis</li>
+                        <li>✅ Exhaustive diagnostic report</li>
+                        <li>✅ Detailed presentation with infographics</li>
+                        <li>✅ Extended market positioning analysis</li>
+                        <li>✅ ROI-oriented recommendations</li>
+                        <li>✅ 30 days of consultation support</li>
+                    </ul>
+                    <button class="btn-outline" onclick="selectPlan('elite')">Choose Elite</button>
                 </div>
-                <div class="country-card">
-                    <h4>🇨🇭 Switzerland</h4>
-                    <p>100 companies · CHF 900k potential</p>
-                    <span>Finance, Pharma, Precision</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <h2>📋 How It Works</h2>
+            <p class="section-subtitle">Simple and transparent process without bureaucracy</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">1</div>
+                    <h4>Request Demo</h4>
+                    <p>Enter your website URL to get free personalized demo report</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">2</div>
+                    <h4>See The Value</h4>
+                    <p>Review demo showing actual critical issues found on your site</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">3</div>
+                    <h4>Choose Package</h4>
+                    <p>Select diagnostic package that matches your needs</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">4</div>
+                    <h4>Get Full Report</h4>
+                    <p>Receive complete diagnostic report immediately after payment</p>
                 </div>
             </div>
         </div>
@@ -119,29 +190,29 @@
                         <div class="payment-step">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <strong>Request Demo Report</strong>
-                                <p>Get comprehensive market analysis sample</p>
+                                <strong>Get Demo Report</strong>
+                                <p>Receive free demo showing actual issues</p>
                             </div>
                         </div>
                         <div class="payment-step">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <strong>Review Insights Quality</strong>
-                                <p>Verify relevance and depth for your business</p>
+                                <strong>Choose Package</strong>
+                                <p>Select diagnostic package for full analysis</p>
                             </div>
                         </div>
                         <div class="payment-step">
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <strong>Pay with USDT</strong>
-                                <p>Only if satisfied with demo quality</p>
+                                <p>Complete payment via USDT (TRC20)</p>
                             </div>
                         </div>
                         <div class="payment-step">
                             <div class="step-number">4</div>
                             <div class="step-content">
-                                <strong>Receive Full PDF Reports</strong>
-                                <p>Complete analysis delivered within 24h</p>
+                                <strong>Receive Full Report</strong>
+                                <p>Get complete PDF report instantly</p>
                             </div>
                         </div>
                     </div>
@@ -154,7 +225,7 @@
                                 <code id="usdt-address">TGvyTtKBiSY5RHsfWipRdTjpWroeQSGLTC</code>
                                 <button class="btn-copy" onclick="copyAddress()">Copy</button>
                             </div>
-                            <small>Network: TRC20 (Tron) | Minimum: $199</small>
+                            <small>Network: TRC20 (Tron) | Minimum: $97</small>
                         </div>
 
                         <div class="qr-code">
@@ -171,62 +242,17 @@
                                 *Amounts in local currencies are approximate. 
                                 Actual cost during conversion may vary slightly 
                                 depending on current market rates at the time of payment. 
-                                Fixed service price is 199 USDT.
+                                Fixed service price is in USDT.
                             </small>
                         </p>
                     </div>
 
-                    <!-- PAYMENT CONFIRMATION BUTTON -->
+                    <!-- PAYMENT CONFIRMATION -->
                     <div class="payment-confirmation">
                         <button class="btn-confirm" onclick="showConfirmationForm()">
                             ✅ I've Paid - Send Full Report
                         </button>
-                        <p class="confirmation-note">After payment, click to receive your full analysis</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Website Health Score Calculator -->
-    <section class="health-score-section">
-        <div class="container">
-            <h2>📊 Instant Website Health Score Analysis</h2>
-            <div class="health-score-widget">
-                <div class="score-input">
-                    <input type="url" placeholder="Enter your website URL" id="website-url">
-                    <button class="btn-primary" onclick="calculateWebsiteHealthScore()">Analyze Website</button>
-                </div>
-                <div class="score-result" id="score-result">
-                    <div class="score-display">
-                        <span class="score">-/-</span>
-                        <span class="label">Website Health Score</span>
-                    </div>
-                    <div class="score-breakdown">
-                        <div class="metric">
-                            <span class="metric-name">Performance</span>
-                            <div class="metric-bar">
-                                <div class="metric-fill" data-value="0"></div>
-                            </div>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-name">SEO</span>
-                            <div class="metric-bar">
-                                <div class="metric-fill" data-value="0"></div>
-                            </div>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-name">Security</span>
-                            <div class="metric-bar">
-                                <div class="metric-fill" data-value="0"></div>
-                            </div>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-name">Conversion</span>
-                            <div class="metric-bar">
-                                <div class="metric-fill" data-value="0"></div>
-                            </div>
-                        </div>
+                        <p class="confirmation-note">After payment, click to receive your full diagnostic report</p>
                     </div>
                 </div>
             </div>
@@ -240,14 +266,29 @@
                 <div class="footer-section">
                     <h3>Matrix Intelligence</h3>
                     <p>Where data becomes strategy</p>
+                    <div class="contact-info">
+                        <p>📧 digitaleng.contact@gmail.com</p>
+                        <p>📱 Telegram: @DigitalEng_Support</p>
+                    </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>📧 digitaleng.contact@gmail.com</p>
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#demo">Free Demo Report</a></li>
+                        <li><a href="#pricing">Diagnostic Packages</a></li>
+                        <li><a href="#process">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Diagnostics</h3>
+                    <ul>
+                        <li><a href="#health-check">Website Health</a></li>
+                        <li><a href="#usdt-payment">Payment Info</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Matrix Intelligence. All rights reserved.</p>
+                <p>&copy; 2024 Matrix Intelligence. Professional website diagnostics. All reports are provided as-is based on professional analysis standards.</p>
             </div>
         </div>
     </footer>
