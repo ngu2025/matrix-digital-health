@@ -1,298 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- МЕТА ТЕГИ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Health Check & Growth Accelerator | Matrix Intelligence</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/landing.css">
+    
+    <!-- ЗАГОЛОВОК И ОПИСАНИЕ -->
+    <title>Matrix Digital Health | Professional Website Diagnosis</title>
+    <meta name="description" content="Advanced 5-layer website health audit with profit leak detection. Pay only after receiving detailed analysis.">
+    
+    <!-- СТИЛИ -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/demo.css">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Matrix Digital Health">
+    <meta property="og:description" content="Website Health Diagnosis & Growth Acceleration">
+    <meta property="og:type" content="website">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
         <div class="container">
-            <div class="logo">
-                <h1>MATRIX INTELLIGENCE</h1>
-                <span>Website Health Check</span>
+            <div class="header-content">
+                <!-- ЛОГОТИП -->
+                <div class="logo">
+                    <div class="logo-icon">⚡</div>
+                    <div class="logo-text">
+                        <h1 class="logo-title">Matrix Digital Health</h1>
+                        <p class="logo-subtitle">Where Data Becomes Strategy</p>
+                    </div>
+                </div>
+                
+                <!-- НАВИГАЦИЯ -->
+                <nav class="main-nav">
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#process" class="nav-link">Process</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
             </div>
-            <nav class="nav">
-                <a href="#health-check" class="nav-link active">🔍 Website Health</a>
-                <a href="#pricing" class="nav-link">💎 Pricing</a>
-                <a href="#process" class="nav-link">📋 Process</a>
-                <a href="#usdt-payment" class="nav-link">💰 Payment</a>
-            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="health-check">
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section">
         <div class="container">
-            <h1>Website Health Check & <span class="accent">Quantum Growth Leap</span></h1>
-            <p class="subtitle">Get professional website diagnosis first — pay only after receiving full report. 0 risk.</p>
-            
-            <!-- Diagnosis Matrix -->
-            <div class="diagnosis-matrix">
-                <div class="diagnosis-pillar">
-                    <div class="pillar-icon">🛡️</div>
-                    <h4>Website Immunity</h4>
-                    <p>Security & Stability Audit</p>
+            <div class="hero-content">
+                <!-- ГЛАВНЫЙ ЗАГОЛОВОК -->
+                <h1 class="hero-title">
+                    <span class="title-line">Advanced Website</span>
+                    <span class="title-line accent">Health Diagnosis</span>
+                </h1>
+                
+                <!-- ПОДЗАГОЛОВОК -->
+                <p class="hero-subtitle">
+                    Discover hidden growth opportunities with our 5-layer technological audit. 
+                    <strong>Pay only after receiving detailed analysis.</strong>
+                </p>
+                
+                <!-- ОСНОВНОЙ ПРИЗЫВ -->
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="start-analysis-btn">
+                        Start Free Analysis
+                    </button>
+                    <button class="btn btn-secondary" id="view-demo-btn">
+                        View Sample Report
+                    </button>
                 </div>
-                <div class="diagnosis-pillar">
-                    <div class="pillar-icon">🧬</div>
-                    <h4>SEO-DNA Analysis</h4>
-                    <p>Search Effectiveness Genetics</p>
-                </div>
-                <div class="diagnosis-pillar">
-                    <div class="pillar-icon">💸</div>
-                    <h4>Traffic Metabolism</h4>
-                    <p>Conversion & Leakage Diagnosis</p>
-                </div>
-                <div class="diagnosis-pillar">
-                    <div class="pillar-icon">🥊</div>
-                    <h4>Competitive Genome</h4>
-                    <p>Industry Leaders DNA Decoding</p>
-                </div>
-                <div class="diagnosis-pillar">
-                    <div class="pillar-icon">📈</div>
-                    <h4>Growth Scenario</h4>
-                    <p>Personal Scaling Roadmap</p>
-                </div>
-            </div>
-
-            <!-- CTA Buttons -->
-            <div class="cta-buttons">
-                <button class="btn-primary" onclick="requestDemoReport()">Get Free Demo Report</button>
-                <button class="btn-outline" onclick="scrollToSection('pricing')">View Pricing</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Demo Report Section -->
-    <section class="demo-section" id="demo">
-        <div class="container">
-            <h2>🚀 See Value First - Pay After</h2>
-            <p class="section-subtitle">Get personalized demo report showing actual findings from your website</p>
-            
-            <div class="demo-request">
-                <div class="demo-input">
-                    <input type="url" placeholder="Enter your website URL (e.g., https://example.com)" id="website-url">
-                    <button class="btn-primary" onclick="generateDemoReport()">Generate Free Demo</button>
-                </div>
-                <div class="demo-note">
-                    <p>💡 We'll create a personalized demo report showing 3-4 critical issues found on your site.</p>
+                
+                <!-- ДОВЕРИЕ -->
+                <div class="trust-badges">
+                    <div class="badge">🔒 No Upfront Payment</div>
+                    <div class="badge">💎 USDT Payments</div>
+                    <div class="badge">🌍 Global Clients</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing-section" id="pricing">
+    <!-- ===== TECHNOLOGY MATRIX ===== -->
+    <section class="tech-section" id="services">
         <div class="container">
-            <h2>💎 Professional Diagnostic Packages</h2>
-            <p class="section-subtitle">Choose the level of analysis that matches your needs</p>
+            <div class="section-header">
+                <h2 class="section-title">5-Layer Technology Matrix</h2>
+                <p class="section-subtitle">Comprehensive website diagnosis across all critical systems</p>
+            </div>
             
-            <div class="pricing-matrix">
-                <!-- BASIC PLAN -->
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>BASIC</h3>
-                        <div class="price">$97<span>/one-time</span></div>
+            <!-- МАТРИЦА ТЕХНОЛОГИЙ -->
+            <div class="tech-matrix">
+                <!-- КАРТОЧКА 1: IMMUNITY -->
+                <div class="tech-card" data-tech="immunity">
+                    <div class="tech-card-inner">
+                        <div class="tech-icon">🛡️</div>
+                        <h3 class="tech-title">Website Immunity</h3>
+                        <p class="tech-description">Security, stability & performance audit</p>
+                        <div class="tech-features">
+                            <span>SSL Analysis</span>
+                            <span>Performance Audit</span>
+                            <span>Security Headers</span>
+                        </div>
+                        <button class="tech-action-btn">View Demo</button>
                     </div>
-                    <ul class="plan-features">
-                        <li>✅ Personal demo report with critical issues</li>
-                        <li>✅ Complete diagnostic analysis in PDF</li>
-                        <li>✅ Identification of key growth points</li>
-                        <li>✅ Priority improvement recommendations</li>
-                        <li>✅ Text analysis with analytical graphics</li>
-                    </ul>
-                    <button class="btn-outline" onclick="selectPlan('basic')">Choose Basic</button>
                 </div>
-
-                <!-- PREMIUM PLAN -->
-                <div class="plan-card featured">
-                    <div class="plan-header">
-                        <h3>PREMIUM</h3>
-                        <div class="price">$247<span>/one-time</span></div>
+                
+                <!-- КАРТОЧКА 2: SEO-DNA -->
+                <div class="tech-card" data-tech="seo">
+                    <div class="tech-card-inner">
+                        <div class="tech-icon">🧬</div>
+                        <h3 class="tech-title">SEO-DNA Analysis</h3>
+                        <p class="tech-description">Search optimization genetics decoding</p>
+                        <div class="tech-features">
+                            <span>Keyword Architecture</span>
+                            <span>Content Structure</span>
+                            <span>Backlink Profile</span>
+                        </div>
+                        <button class="tech-action-btn">View Demo</button>
                     </div>
-                    <ul class="plan-features">
-                        <li>✅ Extended demo with competitive analysis elements</li>
-                        <li>✅ Comprehensive diagnostic report in PDF</li>
-                        <li>✅ Professional presentation of results</li>
-                        <li>✅ Competitive environment analysis</li>
-                        <li>✅ Detailed action plan</li>
-                        <li>✅ Improvement potential calculation</li>
-                    </ul>
-                    <button class="btn-primary" onclick="selectPlan('premium')">Choose Premium</button>
                 </div>
-
-                <!-- ELITE PLAN -->
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>ELITE</h3>
-                        <div class="price">$497<span>/one-time</span></div>
+                
+                <!-- КАРТОЧКА 3: TRAFFIC -->
+                <div class="tech-card" data-tech="traffic">
+                    <div class="tech-card-inner">
+                        <div class="tech-icon">💸</div>
+                        <h3 class="tech-title">Traffic Metabolism</h3>
+                        <p class="tech-description">Conversion flow & leakage diagnosis</p>
+                        <div class="tech-features">
+                            <span>User Journey Analysis</span>
+                            <span>Conversion Funnels</span>
+                            <span>Behavior Metrics</span>
+                        </div>
+                        <button class="tech-action-btn">View Demo</button>
                     </div>
-                    <ul class="plan-features">
-                        <li>✅ Deep demo with full competitive analysis</li>
-                        <li>✅ Exhaustive diagnostic report</li>
-                        <li>✅ Detailed presentation with infographics</li>
-                        <li>✅ Extended market positioning analysis</li>
-                        <li>✅ ROI-oriented recommendations</li>
-                        <li>✅ 30 days of consultation support</li>
-                    </ul>
-                    <button class="btn-outline" onclick="selectPlan('elite')">Choose Elite</button>
+                </div>
+                
+                <!-- КАРТОЧКА 4: COMPETITIVE -->
+                <div class="tech-card" data-tech="competitive">
+                    <div class="tech-card-inner">
+                        <div class="tech-icon">🥊</div>
+                        <h3 class="tech-title">Competitive Genome</h3>
+                        <p class="tech-description">Market leaders DNA decoding</p>
+                        <div class="tech-features">
+                            <span>Competitor Analysis</span>
+                            <span>Market Positioning</span>
+                            <span>Gap Identification</span>
+                        </div>
+                        <button class="tech-action-btn">View Demo</button>
+                    </div>
+                </div>
+                
+                <!-- КАРТОЧКА 5: GROWTH -->
+                <div class="tech-card" data-tech="growth">
+                    <div class="tech-card-inner">
+                        <div class="tech-icon">📈</div>
+                        <h3 class="tech-title">Growth Scenario</h3>
+                        <p class="tech-description">Personal scaling roadmap</p>
+                        <div class="tech-features">
+                            <span>ROI Calculations</span>
+                            <span>Implementation Plan</span>
+                            <span>KPI Tracking</span>
+                        </div>
+                        <button class="tech-action-btn">View Demo</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- ===== PROCESS SECTION ===== -->
     <section class="process-section" id="process">
         <div class="container">
-            <h2>📋 How It Works</h2>
-            <p class="section-subtitle">Simple and transparent process without bureaucracy</p>
+            <div class="section-header">
+                <h2 class="section-title">Simple & Transparent Process</h2>
+                <p class="section-subtitle">No bureaucracy, no upfront payments, no hidden fees</p>
+            </div>
             
             <div class="process-steps">
                 <div class="process-step">
-                    <div class="step-icon">1</div>
-                    <h4>Request Demo</h4>
-                    <p>Enter your website URL to get free personalized demo report</p>
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Request Analysis</h3>
+                    <p class="step-description">Choose service package and provide website URL</p>
                 </div>
+                
                 <div class="process-step">
-                    <div class="step-icon">2</div>
-                    <h4>See The Value</h4>
-                    <p>Review demo showing actual critical issues found on your site</p>
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Receive Detailed Report</h3>
+                    <p class="step-description">Get comprehensive PDF analysis within 24-48 hours</p>
                 </div>
+                
                 <div class="process-step">
-                    <div class="step-icon">3</div>
-                    <h4>Choose Package</h4>
-                    <p>Select diagnostic package that matches your needs</p>
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Review & Approve</h3>
+                    <p class="step-description">Examine findings and calculated profit potential</p>
                 </div>
+                
                 <div class="process-step">
-                    <div class="step-icon">4</div>
-                    <h4>Get Full Report</h4>
-                    <p>Receive complete diagnostic report immediately after payment</p>
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Pay & Implement</h3>
+                    <p class="step-description">Pay via USDT only if satisfied with analysis quality</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- USDT Payment Section -->
-    <section class="global-payment" id="usdt-payment">
+    <!-- ===== PRICING SECTION ===== -->
+    <section class="pricing-section" id="pricing">
         <div class="container">
-            <h2>💎 Global Payments in USDT (TRC20)</h2>
+            <div class="section-header">
+                <h2 class="section-title">Clear Pricing Packages</h2>
+                <p class="section-subtitle">Choose based on your needs and budget</p>
+            </div>
             
+            <div class="pricing-cards">
+                <!-- BASIC -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Basic Analysis</h3>
+                        <div class="plan-price">$97</div>
+                        <p class="plan-description">Single technology deep dive</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ One technology audit</li>
+                        <li>✓ 15+ page PDF report</li>
+                        <li>✓ 3 priority recommendations</li>
+                        <li>✓ Profit leak calculation</li>
+                        <li>✓ 48-hour delivery</li>
+                    </ul>
+                    <button class="btn btn-outline" data-plan="basic">Choose Basic</button>
+                </div>
+                
+                <!-- PREMIUM -->
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3 class="plan-name">Premium Audit</h3>
+                        <div class="plan-price">$247</div>
+                        <p class="plan-description">Complete 5-layer analysis</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Full 5-layer audit</li>
+                        <li>✓ 30+ page PDF report</li>
+                        <li>✓ Competitor comparison</li>
+                        <li>✓ ROI calculations</li>
+                        <li>✓ Implementation roadmap</li>
+                        <li>✓ 24-hour delivery</li>
+                    </ul>
+                    <button class="btn btn-primary" data-plan="premium">Choose Premium</button>
+                </div>
+                
+                <!-- ELITE -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Elite Package</h3>
+                        <div class="plan-price">$497</div>
+                        <p class="plan-description">Enterprise-grade solution</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Everything in Premium</li>
+                        <li>✓ Extended competitor analysis</li>
+                        <li>✓ Custom implementation plan</li>
+                        <li>✓ 30-day support</li>
+                        <li>✓ Quarterly follow-up</li>
+                        <li>✓ Priority 12-hour delivery</li>
+                    </ul>
+                    <button class="btn btn-outline" data-plan="elite">Choose Elite</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAYMENT SECTION ===== -->
+    <section class="payment-section">
+        <div class="container">
             <div class="payment-content">
                 <div class="payment-info">
-                    <h3>💎 USDT (TRC20) Payments Only</h3>
-                    <p>No registration, no verification, no bureaucracy. Global payments accepted instantly.</p>
+                    <h2 class="payment-title">💎 Global USDT (TRC20) Payments</h2>
+                    <p class="payment-description">
+                        Simple, secure, borderless payments. No registration, no bureaucracy.
+                    </p>
                     
-                    <div class="payment-steps">
-                        <div class="payment-step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <strong>Get Demo Report</strong>
-                                <p>Receive free demo showing actual issues</p>
-                            </div>
+                    <div class="usdt-address">
+                        <label>Send USDT to this address:</label>
+                        <div class="address-display">
+                            <code id="usdt-address">TGvyTtKBiSY5RHsfWipRdTjpWroeQSGLTC</code>
+                            <button class="btn-copy" id="copy-address-btn">Copy</button>
                         </div>
-                        <div class="payment-step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <strong>Choose Package</strong>
-                                <p>Select diagnostic package for full analysis</p>
-                            </div>
-                        </div>
-                        <div class="payment-step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <strong>Pay with USDT</strong>
-                                <p>Complete payment via USDT (TRC20)</p>
-                            </div>
-                        </div>
-                        <div class="payment-step">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <strong>Receive Full Report</strong>
-                                <p>Get complete PDF report instantly</p>
-                            </div>
-                        </div>
+                        <small>Network: TRC20 (Tron) | Minimum: $97</small>
                     </div>
-
-                    <!-- USDT ADDRESS AND QR-CODE -->
-                    <div class="usdt-payment-container">
-                        <div class="usdt-address">
-                            <label>Send USDT (TRC20) to:</label>
-                            <div class="address-box">
-                                <code id="usdt-address">TGvyTtKBiSY5RHsfWipRdTjpWroeQSGLTC</code>
-                                <button class="btn-copy" onclick="copyAddress()">Copy</button>
-                            </div>
-                            <small>Network: TRC20 (Tron) | Minimum: $97</small>
-                        </div>
-
-                        <div class="qr-code">
-                            <img src="images/qr-usdt-trc20.png" alt="USDT QR Code" class="qr-image">
-                            <p>Scan to pay with USDT (TRC20)</p>
-                            <small>Address: TGvyTtKBiSY5RHsfWipRdTjpWroeQSGLTC</small>
-                        </div>
+                    
+                    <div class="payment-note">
+                        <p>💡 <strong>Note:</strong> Payment only after you receive and approve the analysis report.</p>
                     </div>
-
-                    <!-- Currency Disclaimer -->
-                    <div class="currency-disclaimer">
-                        <p class="disclaimer-text">
-                            <small>
-                                *Amounts in local currencies are approximate. 
-                                Actual cost during conversion may vary slightly 
-                                depending on current market rates at the time of payment. 
-                                Fixed service price is in USDT.
-                            </small>
-                        </p>
-                    </div>
-
-                    <!-- PAYMENT CONFIRMATION -->
-                    <div class="payment-confirmation">
-                        <button class="btn-confirm" onclick="showConfirmationForm()">
-                            ✅ I've Paid - Send Full Report
-                        </button>
-                        <p class="confirmation-note">After payment, click to receive your full diagnostic report</p>
+                </div>
+                
+                <div class="qr-container">
+                    <div class="qr-code">
+                        <img src="assets/images/qr-usdt.png" alt="USDT QR Code">
+                        <p>Scan to pay with USDT</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- ===== FOOTER ===== -->
+    <footer class="main-footer" id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Matrix Intelligence</h3>
-                    <p>Where data becomes strategy</p>
+                    <h3>Matrix Digital Health</h3>
+                    <p>Professional website diagnosis and growth acceleration services.</p>
                     <div class="contact-info">
                         <p>📧 digitaleng.contact@gmail.com</p>
                         <p>📱 Telegram: @DigitalEng_Support</p>
                     </div>
                 </div>
+                
                 <div class="footer-section">
                     <h3>Services</h3>
-                    <ul>
-                        <li><a href="#demo">Free Demo Report</a></li>
-                        <li><a href="#pricing">Diagnostic Packages</a></li>
-                        <li><a href="#process">How It Works</a></li>
+                    <ul class="footer-links">
+                        <li><a href="#services">Website Immunity Audit</a></li>
+                        <li><a href="#services">SEO-DNA Analysis</a></li>
+                        <li><a href="#services">Traffic Metabolism</a></li>
+                        <li><a href="#services">Competitive Genome</a></li>
+                        <li><a href="#services">Growth Scenario</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Diagnostics</h3>
-                    <ul>
-                        <li><a href="#health-check">Website Health</a></li>
-                        <li><a href="#usdt-payment">Payment Info</a></li>
+                    <h3>Documentation</h3>
+                    <ul class="footer-links">
+                        <li><a href="#process">Work Process</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 Matrix Intelligence. Professional website diagnostics. All reports are provided as-is based on professional analysis standards.</p>
+                <p>&copy; 2025 Matrix Digital Health. All rights reserved.</p>
+                <p>Professional B2B website diagnosis services.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <!-- ===== ДЕМО-МОДАЛЬНОЕ ОКНО ===== -->
+    <div id="demo-modal" class="demo-modal">
+        <div class="demo-modal-overlay"></div>
+        <div class="demo-modal-content">
+            <button class="demo-modal-close" id="close-demo-btn">×</button>
+            <div id="demo-content"></div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/main.js"></script>
+    <script src="js/demo-core.js"></script>
+    
+    <!-- ИНИЦИАЛИЗАЦИЯ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализация основной системы
+            if (typeof MatrixSystem !== 'undefined') {
+                MatrixSystem.init();
+            }
+            
+            // Инициализация демо-системы
+            if (typeof DemoCore !== 'undefined') {
+                DemoCore.init();
+            }
+            
+            console.log('✅ Matrix Digital Health initialized successfully');
+        });
+    </script>
 </body>
 </html>
