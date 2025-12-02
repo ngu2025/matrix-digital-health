@@ -210,10 +210,9 @@ window.DemoCore = (function() {
         
         // ===== ОТКРЫТИЕ ДЕМО ДЛЯ ТЕХНОЛОГИИ =====
         openTechDemo: function(techId, domain) {
-            if (isGenerating) {
-                console.warn('Demo generation already in progress');
-                return;
-            }
+            console.log('🚀 Opening demo for:', techId, domain);
+            
+            
             
             if (!config.techData[techId]) {
                 this.showError('Invalid technology selected');
@@ -231,18 +230,13 @@ window.DemoCore = (function() {
                 timestamp: Date.now()
             };
             
-            // Проверяем лимиты
-            if (!this.checkDemoLimits()) {
-                this.showError('Daily demo limit reached. Please try again tomorrow.');
-                return;
-            }
-            
             // Начинаем генерацию демо
             this.startDemoGeneration(techId, domain);
         },
         
         // ===== ГЕНЕРАЦИЯ ДЕМО-ОТЧЕТА =====
         startDemoGeneration: function(techId, domain) {
+            console.log('🔄 Starting demo generation...');
             isGenerating = true;
             
             // Показываем индикатор загрузки
@@ -251,13 +245,17 @@ window.DemoCore = (function() {
             // Симулируем процесс генерации с прогрессом
             this.simulateGenerationProgress()
                 .then(() => {
+                    console.log('✅ Generation progress complete');
+                    
                     // Генерируем данные демо
                     const demoData = this.generateDemoData(techId, domain);
+                    console.log('✅ Demo data generated:', demoData);
                     
                     // Скрываем индикатор загрузки
                     this.hideLoading();
                     
                     // Показываем демо
+                    console.log('🔄 Displaying demo...');
                     this.displayDemo(demoData);
                     
                     // Сохраняем в кэш
@@ -267,9 +265,10 @@ window.DemoCore = (function() {
                     this.updateDemoCounter();
                     
                     isGenerating = false;
+                    console.log('✅ Demo generation complete');
                 })
                 .catch(error => {
-                    console.error('Demo generation failed:', error);
+                    console.error('❌ Demo generation failed:', error);
                     this.hideLoading();
                     this.showError('Failed to generate demo. Please try again.');
                     isGenerating = false;
@@ -279,6 +278,7 @@ window.DemoCore = (function() {
         // ===== СИМУЛЯЦИЯ ПРОГРЕССА ГЕНЕРАЦИИ =====
         simulateGenerationProgress: function() {
             return new Promise((resolve) => {
+                console.log('📊 Starting progress simulation...');
                 let progress = 0;
                 const progressBar = document.querySelector('.demo-progress-fill');
                 const progressText = document.querySelector('.progress-current');
@@ -295,8 +295,11 @@ window.DemoCore = (function() {
                         progressText.textContent = Math.round(progress) + '%';
                     }
                     
+                    console.log(`📈 Progress: ${Math.round(progress)}%`);
+                    
                     if (progress >= 100) {
                         clearInterval(interval);
+                        console.log('✅ Progress simulation complete');
                         setTimeout(resolve, 500);
                     }
                 }, 200);
@@ -305,6 +308,8 @@ window.DemoCore = (function() {
         
         // ===== ГЕНЕРАЦИЯ ДАННЫХ ДЕМО =====
         generateDemoData: function(techId, domain) {
+            console.log('🧠 Generating demo data for:', techId, domain);
+            
             const techConfig = config.techData[techId];
             const template = techTemplates[techId];
             
@@ -343,7 +348,7 @@ window.DemoCore = (function() {
             const potentialGrowth = Math.round(monthlyLoss * (improvementPotential / 100));
             const roiPotential = 100 + (randomSeed % 400);
             
-            return {
+            const demoData = {
                 techId: techId,
                 domain: domain,
                 techConfig: techConfig,
@@ -358,26 +363,45 @@ window.DemoCore = (function() {
                 generatedAt: new Date().toISOString(),
                 demoId: 'DEMO-' + Date.now() + '-' + techId.toUpperCase()
             };
+            
+            console.log('✅ Demo data generated successfully');
+            return demoData;
         },
         
         // ===== ОТОБРАЖЕНИЕ ДЕМО =====
         displayDemo: function(demoData) {
+            console.log('🖥️ Displaying demo with data:', demoData ? 'yes' : 'no');
+            
+            if (!demoData) {
+                console.error('❌ No demo data provided!');
+                this.showError('No demo data to display');
+                return;
+            }
+            
             if (!demoModal) {
+                console.log('🔄 Setting up demo modal...');
                 this.setupDemoModal();
             }
             
             // Генерируем HTML контент
+            console.log('🔄 Generating demo HTML...');
             const demoHTML = this.generateDemoHTML(demoData);
             
             // Вставляем контент
             const demoContent = document.getElementById('demo-content');
             if (demoContent) {
                 demoContent.innerHTML = demoHTML;
+                console.log('✅ Demo HTML inserted');
+            } else {
+                console.error('❌ Demo content element not found!');
+                return;
             }
             
             // Показываем модалку
+            console.log('🔄 Showing modal...');
             demoModal.classList.add('active');
             document.body.style.overflow = 'hidden';
+            console.log('✅ Modal should be visible now!');
             
             // Добавляем обработчики для кнопок внутри демо
             this.setupDemoButtons(demoData);
@@ -391,6 +415,7 @@ window.DemoCore = (function() {
         
         // ===== ГЕНЕРАЦИЯ HTML ДЕМО =====
         generateDemoHTML: function(data) {
+            console.log('📝 Generating HTML for demo...');
             const tech = data.techConfig;
             
             return `
@@ -736,6 +761,7 @@ window.DemoCore = (function() {
             if (loading) {
                 loading.classList.add('active');
                 document.body.style.overflow = 'hidden';
+                console.log('⏳ Loading screen shown');
             }
         },
         
@@ -744,6 +770,7 @@ window.DemoCore = (function() {
             if (loading) {
                 loading.classList.remove('active');
                 document.body.style.overflow = '';
+                console.log('✅ Loading screen hidden');
             }
         },
         
@@ -785,7 +812,7 @@ window.DemoCore = (function() {
                 };
                 
                 localStorage.setItem(cacheKey, JSON.stringify(cacheData));
-                console.log('Demo saved to cache:', cacheKey);
+                console.log('💾 Demo saved to cache:', cacheKey);
             } catch (error) {
                 console.warn('Failed to save demo to cache:', error);
             }
@@ -796,7 +823,7 @@ window.DemoCore = (function() {
                 const today = new Date().toDateString();
                 const cacheKey = `demo_counter_${today}`;
                 const count = localStorage.getItem(cacheKey) || 0;
-                console.log('Demo counter loaded:', count);
+                console.log('📊 Demo counter loaded:', count);
             } catch (error) {
                 console.warn('Failed to load demo cache:', error);
             }
@@ -809,7 +836,7 @@ window.DemoCore = (function() {
                 let count = parseInt(localStorage.getItem(cacheKey) || '0');
                 count++;
                 localStorage.setItem(cacheKey, count.toString());
-                console.log('Demo counter updated:', count);
+                console.log('📈 Demo counter updated:', count);
             } catch (error) {
                 console.warn('Failed to update demo counter:', error);
             }
@@ -902,256 +929,28 @@ window.DemoCore = (function() {
             `);
         },
         
-        // ===== ПУБЛИЧНЫЕ МЕТОДЫ =====
-        
-        // Получить информацию о системе
-        getInfo: function() {
-            return {
-                version: config.version,
-                technologies: Object.keys(config.techData),
-                demoCount: this.getDemoCount(),
-                cacheSize: this.getCacheSize()
-            };
-        },
-        
-        // Получить количество демо за сегодня
-        getDemoCount: function() {
-            try {
-                const today = new Date().toDateString();
-                const cacheKey = `demo_counter_${today}`;
-                return parseInt(localStorage.getItem(cacheKey) || '0');
-            } catch {
-                return 0;
-            }
-        },
-        
-        // Получить размер кэша
-        getCacheSize: function() {
-            try {
-                let size = 0;
-                for (let key in localStorage) {
-                    if (key.startsWith('demo_')) {
-                        size += localStorage.getItem(key).length;
-                    }
-                }
-                return (size / 1024).toFixed(2) + ' KB';
-            } catch {
-                return 'Unknown';
-            }
-        },
-        
-        // Очистить кэш
-        clearCache: function() {
-            try {
-                const keysToRemove = [];
-                for (let key in localStorage) {
-                    if (key.startsWith('demo_') || key.startsWith('demo_counter_')) {
-                        keysToRemove.push(key);
-                    }
-                }
-                
-                keysToRemove.forEach(key => localStorage.removeItem(key));
-                console.log('Cache cleared:', keysToRemove.length, 'items removed');
-                this.showSuccess('Demo cache cleared successfully');
-                
-                return keysToRemove.length;
-            } catch (error) {
-                console.error('Failed to clear cache:', error);
-                this.showError('Failed to clear cache');
-                return 0;
-            }
-        },
-        
-        // Тестовая генерация демо
+        // ===== ТЕСТОВАЯ ФУНКЦИЯ =====
         testDemo: function(techId = 'immunity', domain = 'example.com') {
-            console.log('Running test demo generation...');
+            console.log('🧪 TESTING DEMO SYSTEM...');
             
             try {
                 const demoData = this.generateDemoData(techId, domain);
-                console.log('Test demo generated:', demoData);
+                console.log('✅ Test demo generated:', demoData);
                 
                 this.displayDemo(demoData);
-                this.showSuccess('Test demo generated successfully');
+                console.log('✅ Test demo displayed');
                 
                 return demoData;
             } catch (error) {
-                console.error('Test demo failed:', error);
-                this.showError('Test demo generation failed');
+                console.error('❌ Test demo failed:', error);
                 return null;
             }
         },
-        
-        // Экспорт данных демо
-        exportDemoData: function(demoId = null) {
-            let dataToExport;
-            
-            if (demoId) {
-                // Ищем конкретное демо
-                for (let key in localStorage) {
-                    if (key.startsWith('demo_')) {
-                        try {
-                            const cached = JSON.parse(localStorage.getItem(key));
-                            if (cached.data.demoId === demoId) {
-                                dataToExport = cached.data;
-                                break;
-                            }
-                        } catch (e) {
-                            // Пропускаем невалидные записи
-                        }
-                    }
-                }
-            } else {
-                // Экспорт всех демо
-                const allDemos = [];
-                for (let key in localStorage) {
-                    if (key.startsWith('demo_')) {
-                        try {
-                            const cached = JSON.parse(localStorage.getItem(key));
-                            if (cached.data && Date.now() < cached.expiry) {
-                                allDemos.push(cached.data);
-                            }
-                        } catch (e) {
-                            // Пропускаем невалидные записи
-                        }
-                    }
-                }
-                dataToExport = allDemos;
-            }
-            
-            if (!dataToExport) {
-                this.showError('No demo data found');
-                return false;
-            }
-            
-            try {
-                const dataStr = JSON.stringify(dataToExport, null, 2);
-                const dataBlob = new Blob([dataStr], { type: 'application/json' });
-                
-                const url = URL.createObjectURL(dataBlob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = `demo-export-${demoId || 'all'}-${Date.now()}.json`;
-                a.click();
-                
-                URL.revokeObjectURL(url);
-                
-                this.showSuccess('Demo data exported successfully');
-                return true;
-            } catch (error) {
-                console.error('Export failed:', error);
-                this.showError('Failed to export demo data');
-                return false;
-            }
-        },
-        
-        // Получить статистику
-        getStats: function() {
-            const today = new Date().toDateString();
-            const demoCount = this.getDemoCount();
-            
-            let totalCacheItems = 0;
-            let expiredItems = 0;
-            
-            for (let key in localStorage) {
-                if (key.startsWith('demo_')) {
-                    totalCacheItems++;
-                    try {
-                        const cached = JSON.parse(localStorage.getItem(key));
-                        if (Date.now() > cached.expiry) {
-                            expiredItems++;
-                        }
-                    } catch (e) {
-                        // Невалидная запись
-                    }
-                }
-            }
-            
-            return {
-                demoCountToday: demoCount,
-                totalCacheItems: totalCacheItems,
-                expiredCacheItems: expiredItems,
-                activeCacheItems: totalCacheItems - expiredItems,
-                cacheSize: this.getCacheSize(),
-                dailyLimit: config.maxDemosPerDay,
-                remainingDemos: Math.max(0, config.maxDemosPerDay - demoCount)
-            };
-        },
-        
-        // Восстановить из бэкапа
-        restoreFromBackup: function(jsonData) {
-            try {
-                const data = JSON.parse(jsonData);
-                let restoredCount = 0;
-                
-                if (Array.isArray(data)) {
-                    // Множественный импорт
-                    data.forEach(demoData => {
-                        if (demoData.techId && demoData.domain) {
-                            const cacheKey = `demo_${demoData.techId}_${this.hashString(demoData.domain)}`;
-                            const cacheData = {
-                                data: demoData,
-                                timestamp: Date.now(),
-                                expiry: Date.now() + config.cacheDuration
-                            };
-                            
-                            localStorage.setItem(cacheKey, JSON.stringify(cacheData));
-                            restoredCount++;
-                        }
-                    });
-                } else if (data.techId && data.domain) {
-                    // Одиночный импорт
-                    const cacheKey = `demo_${data.techId}_${this.hashString(data.domain)}`;
-                    const cacheData = {
-                        data: data,
-                        timestamp: Date.now(),
-                        expiry: Date.now() + config.cacheDuration
-                    };
-                    
-                    localStorage.setItem(cacheKey, JSON.stringify(cacheData));
-                    restoredCount = 1;
-                } else {
-                    throw new Error('Invalid backup format');
-                }
-                
-                this.showSuccess(`Restored ${restoredCount} demo(s) from backup`);
-                return restoredCount;
-                
-            } catch (error) {
-                console.error('Restore failed:', error);
-                this.showError('Failed to restore from backup: ' + error.message);
-                return 0;
-            }
-        }
     };
 })();
 
-// ===== ГЛОБАЛЬНЫЕ УТИЛИТЫ ДЛЯ РАБОТЫ С ДЕМО =====
-
-/**
- * Быстрый доступ к демо-системе
- */
-window.$demo = window.DemoCore;
-
-/**
- * Тестовая функция для генерации демо
- */
-window.testDemoGeneration = function(techId = 'immunity', domain = 'example.com') {
-    return DemoCore.testDemo(techId, domain);
-};
-
-/**
- * Очистка кэша демо
- */
-window.clearDemoCache = function() {
-    return DemoCore.clearCache();
-};
-
-/**
- * Получение статистики демо-системы
- */
-window.getDemoStats = function() {
-    return DemoCore.getStats();
-};
+// ===== ГЛОБАЛЬНЫЕ УТИЛИТЫ =====
+window.$D = window.DemoCore;
 
 // ===== АВТОМАТИЧЕСКАЯ ИНИЦИАЛИЗАЦИЯ =====
 (function() {
@@ -1166,8 +965,6 @@ window.getDemoStats = function() {
             if (typeof DemoCore !== 'undefined') {
                 DemoCore.init();
                 
-                // Экспортируем глобально для отладки
-                window.$D = DemoCore;
                 console.log('🎨 Demo Core доступен как window.$D');
                 console.log('🧪 Используйте $D.testDemo() для тестирования');
                 
@@ -1205,40 +1002,11 @@ window.getDemoStats = function() {
     }
 })();
 
-// ===== ИНТЕГРАЦИЯ С КОНСОЛЬЮ ДЛЯ ОТЛАДКИ =====
-if (typeof window !== 'undefined') {
-    window.debugDemo = function() {
-        console.group('🎨 Demo Core Debug');
-        console.log('Version:', DemoCore.getInfo().version);
-        console.log('Stats:', DemoCore.getStats());
-        console.log('Current Demo:', DemoCore.currentDemo || 'None');
-        console.groupEnd();
-        
-        return DemoCore.getInfo();
-    };
-    
-    window.exportDemoBackup = function() {
-        DemoCore.exportDemoData();
-    };
-}
-
-// ===== ОБРАБОТКА ОШИБОК =====
-window.addEventListener('error', function(event) {
-    if (event.error && event.error.toString().includes('DemoCore')) {
-        console.error('🚨 Demo Core Error:', event.error);
-        
-        if (typeof DemoCore !== 'undefined') {
-            DemoCore.showError('A demo system error occurred');
-        }
-    }
-});
-
 // ===== ФИНАЛЬНОЕ СООБЩЕНИЕ =====
 console.log(`
 🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨
 🎨     DEMO CORE SYSTEM LOADED       🎨
 🎨       Interactive demos ready      🎨
-🎨       Personalization engine       🎨
 🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨
 `);
 
