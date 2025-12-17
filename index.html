@@ -13,6 +13,254 @@
     <meta property="og:title" content="Matrix Digital Health - Quantum Analysis">
     <meta property="og:description" content="Professional website analysis with payment after review">
     <meta property="og:type" content="website">
+    
+    <style>
+        /* ===== СТИЛИ ДЛЯ НОВОГО БЛОКА "OUR EXPERT DIRECTIONS" ===== */
+        .expert-directions-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expert-directions-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 220, 130, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(56, 178, 172, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .expert-directions-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .directions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .direction-card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid;
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .direction-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: inherit;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .direction-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: transparent;
+        }
+
+        .direction-card:hover::before {
+            opacity: 1;
+        }
+
+        .direction-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .direction-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .direction-description {
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .direction-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .direction-features span {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #cbd5e0;
+            font-weight: 500;
+        }
+
+        .direction-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .current-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .direction-link {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .direction-link:hover {
+            gap: 12px;
+            opacity: 0.9;
+        }
+
+        /* ИНТЕГРИРОВАННОЕ РЕШЕНИЕ */
+        .integrated-solution {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .integrated-content h3 {
+            font-size: 1.75rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00dc82, #38b2ac, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .integrated-content p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+            max-width: 500px;
+        }
+
+        .btn-integrated {
+            background: linear-gradient(135deg, #00dc82, #38b2ac);
+            color: #020617;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-integrated:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 220, 130, 0.2);
+        }
+
+        .integrated-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .integrated-badges .badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #cbd5e0;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* АДАПТИВНОСТЬ */
+        @media (max-width: 992px) {
+            .directions-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            
+            .integrated-solution {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .integrated-badges {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .expert-directions-section {
+                padding: 60px 0;
+            }
+            
+            .direction-card {
+                padding: 25px;
+            }
+            
+            .integrated-solution {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .directions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .direction-footer {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
@@ -29,7 +277,7 @@
                 <nav class="main-nav">
                     <a href="#formats" class="nav-link">Analysis Formats</a>
                     <a href="#process" class="nav-link">Process</a>
-                    <a href="#samples" class="nav-link">Samples</a>
+                    <a href="#ecosystem" class="nav-link">Our Ecosystem</a>
                     <a href="#pricing" class="nav-link">Pricing</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </nav>
@@ -54,8 +302,8 @@
                     <button class="btn btn-primary" id="choose-format-btn">
                         Choose Analysis Format
                     </button>
-                    <button class="btn btn-secondary" id="view-samples-btn">
-                        View Sample Presentations
+                    <button class="btn btn-secondary" id="view-ecosystem-btn">
+                        View Our Ecosystem
                     </button>
                 </div>
                 
@@ -76,6 +324,7 @@
             </div>
             
             <div class="formats-grid">
+                <!-- Format 1 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">⚛️</div>
@@ -90,6 +339,7 @@
                     <button class="btn-format-select" data-format="quantum-arch">Select This Format</button>
                 </div>
                 
+                <!-- Format 2 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">🔍</div>
@@ -103,6 +353,7 @@
                     <button class="btn-format-select" data-format="quantum-scan">Select This Format</button>
                 </div>
                 
+                <!-- Format 3 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">📊</div>
@@ -116,6 +367,7 @@
                     <button class="btn-format-select" data-format="quantum-flow">Select This Format</button>
                 </div>
                 
+                <!-- Format 4 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">⚡</div>
@@ -129,6 +381,7 @@
                     <button class="btn-format-select" data-format="quantum-perf">Select This Format</button>
                 </div>
                 
+                <!-- Format 5 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">💎</div>
@@ -142,6 +395,7 @@
                     <button class="btn-format-select" data-format="quantum-asset">Select This Format</button>
                 </div>
                 
+                <!-- Format 6 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">🧹</div>
@@ -155,6 +409,7 @@
                     <button class="btn-format-select" data-format="quantum-audit">Select This Format</button>
                 </div>
                 
+                <!-- Format 7 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">📈</div>
@@ -168,6 +423,7 @@
                     <button class="btn-format-select" data-format="quantum-gap">Select This Format</button>
                 </div>
                 
+                <!-- Format 8 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">🚀</div>
@@ -181,6 +437,7 @@
                     <button class="btn-format-select" data-format="quantum-growth">Select This Format</button>
                 </div>
                 
+                <!-- Format 9 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">⚡</div>
@@ -195,6 +452,7 @@
                     <button class="btn-format-select" data-format="quantum-sprint">Select This Format</button>
                 </div>
                 
+                <!-- Format 10 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">🌌</div>
@@ -247,57 +505,110 @@
         </div>
     </section>
 
-    <section class="samples-section" id="samples">
+    <!-- ===== НОВЫЙ БЛОК: OUR EXPERT BUSINESS DIRECTIONS ===== -->
+    <section class="expert-directions-section" id="ecosystem">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Sample Analysis Presentations</h2>
-                <p class="section-subtitle">Interactive presentation examples (data anonymized)</p>
+                <h2 class="section-title">Our Expert Business Directions</h2>
+                <p class="section-subtitle">Three specialized platforms for comprehensive digital transformation</p>
             </div>
             
-            <div class="samples-grid">
-                <div class="sample-card" data-sample="security">
-                    <div class="sample-preview">
-                        <img src="assets/samples/sample-security.jpg" alt="Security Analysis Presentation" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%221e293b%22/><text x=%22200%22 y=%22150%22 font-family=%22Arial%22 font-size=%2220%22 fill=%2200dc82%22 text-anchor=%22middle%22>Security Analysis Presentation</text></svg>'">
+            <div class="directions-grid">
+                <!-- DIRECTION 1: QUANTUM WEBSITE ANALYSIS -->
+                <div class="direction-card" style="border-color: #00dc82;">
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #00dc82, #00b86c);">
+                        ⚡
                     </div>
-                    <h3>Security Quantum Analysis</h3>
-                    <p>Interactive security analysis presentation</p>
-                    <button class="btn-view-sample" data-sample="security">View Sample Presentation</button>
+                    <div class="direction-content">
+                        <h3 style="color: #00dc82;">Quantum Website Analysis</h3>
+                        <p class="direction-description">
+                            Advanced 5-layer technical audit revealing hidden growth opportunities. 
+                            Pay only after receiving detailed analysis.
+                        </p>
+                        <div class="direction-features">
+                            <span>5-Layer Audit</span>
+                            <span>Performance Metrics</span>
+                            <span>Risk-Free Payment</span>
+                        </div>
+                    </div>
+                    <div class="direction-footer">
+                        <div class="current-badge" style="background: #00dc82; color: #020617;">
+                            You are here
+                        </div>
+                        <a href="#formats" class="direction-link" style="color: #00dc82;">
+                            Choose Analysis Format →
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="sample-card" data-sample="seo">
-                    <div class="sample-preview">
-                        <img src="assets/samples/sample-seo.jpg" alt="SEO Analysis Presentation" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%221e293b%22/><text x=%22200%22 y=%22150%22 font-family=%22Arial%22 font-size=%2220%22 fill=%2200dc82%22 text-anchor=%22middle%22>SEO Analysis Presentation</text></svg>'">
+                <!-- DIRECTION 2: DIGITAL ENGINEERING SOLUTIONS -->
+                <div class="direction-card" style="border-color: #38b2ac;">
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #38b2ac, #319795);">
+                        🔧
                     </div>
-                    <h3>SEO Quantum Analysis</h3>
-                    <p>Interactive SEO analysis presentation</p>
-                    <button class="btn-view-sample" data-sample="seo">View Sample Presentation</button>
+                    <div class="direction-content">
+                        <h3 style="color: #38b2ac;">Digital Engineering Solutions</h3>
+                        <p class="direction-description">
+                            Complete digital transformation services: SEO optimization, content engineering, 
+                            GEO-targeting and AI-media solutions.
+                        </p>
+                        <div class="direction-features">
+                            <span>SEO & Content</span>
+                            <span>AI Solutions</span>
+                            <span>GEO Optimization</span>
+                        </div>
+                    </div>
+                    <div class="direction-footer">
+                        <a href="https://ngu2025.github.io/digitaleng-site/" 
+                           target="_blank" 
+                           class="direction-link" 
+                           style="color: #38b2ac;">
+                            Explore All Services →
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="sample-card" data-sample="conversion">
-                    <div class="sample-preview">
-                        <img src="assets/samples/sample-conversion.jpg" alt="Conversion Analysis Presentation" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%221e293b%22/><text x=%22200%22 y=%22150%22 font-family=%22Arial%22 font-size=%2220%22 fill=%2200dc82%22 text-anchor=%22middle%22>Conversion Analysis Presentation</text></svg>'">
+                <!-- DIRECTION 3: AI MARKET INTELLIGENCE -->
+                <div class="direction-card" style="border-color: #8b5cf6;">
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                        🧠
                     </div>
-                    <h3>Conversion Quantum Analysis</h3>
-                    <p>Interactive conversion analysis presentation</p>
-                    <button class="btn-view-sample" data-sample="conversion">View Sample Presentation</button>
+                    <div class="direction-content">
+                        <h3 style="color: #8b5cf6;">AI Market Intelligence</h3>
+                        <p class="direction-description">
+                            AI-powered market analysis with payment after results. 
+                            Get demo report first — then decide to pay.
+                        </p>
+                        <div class="direction-features">
+                            <span>Market Research</span>
+                            <span>Competitive Analysis</span>
+                            <span>Zero Risk Model</span>
+                        </div>
+                    </div>
+                    <div class="direction-footer">
+                        <a href="https://ngu2025.github.io/landing-ai-solutions/" 
+                           target="_blank" 
+                           class="direction-link" 
+                           style="color: #8b5cf6;">
+                            Request Demo Report →
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="sample-card" data-sample="competitive">
-                    <div class="sample-preview">
-                        <img src="assets/samples/sample-competitive.jpg" alt="Competitive Analysis Presentation" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22 viewBox=%220 0 400 300%22><rect width=%22400% height=%22300%22 fill=%221e293b%22/><text x=%22200%22 y=%22150%22 font-family=%22Arial%22 font-size=%2220%22 fill=%2200dc82%22 text-anchor=%22middle%22>Competitive Analysis Presentation</text></svg>'">
-                    </div>
-                    <h3>Competitive Quantum Analysis</h3>
-                    <p>Interactive competitive analysis presentation</p>
-                    <button class="btn-view-sample" data-sample="competitive">View Sample Presentation</button>
+            </div>
+            
+            <!-- INTEGRATED SOLUTION -->
+            <div class="integrated-solution">
+                <div class="integrated-content">
+                    <h3>Need Integrated Strategy?</h3>
+                    <p>Combine multiple services for maximum impact. Get personalized roadmap for your business growth.</p>
+                    <a href="#contact" class="btn-integrated">
+                        Get Custom Strategy →
+                    </a>
                 </div>
-                
-                <div class="sample-card" data-sample="growth">
-                    <div class="sample-preview">
-                        <img src="assets/samples/sample-growth.jpg" alt="Growth Analysis Presentation" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%221e293b%22/><text x=%22200%22 y=%22150%22 font-family=%22Arial%22 font-size=%2220%22 fill=%2200dc82%22 text-anchor=%22middle%22>Growth Analysis Presentation</text></svg>'">
-                    </div>
-                    <h3>Growth Quantum Analysis</h3>
-                    <p>Interactive growth analysis presentation</p>
-                    <button class="btn-view-sample" data-sample="growth">View Sample Presentation</button>
+                <div class="integrated-badges">
+                    <span class="badge">Cross-Platform</span>
+                    <span class="badge">Priority Support</span>
+                    <span class="badge">Volume Discount</span>
                 </div>
             </div>
         </div>
@@ -367,10 +678,7 @@
                     </div>
                     
                     <div class="payment-note">
-                        <div class="payment-note">
-    <p>💡 <strong>Note:</strong> Payment follows delivery of your website analysis presentation.</p>
-</div>
-</div>
+                        <p>💡 <strong>Note:</strong> Payment follows delivery of your website analysis presentation.</p>
                     </div>
                 </div>
                 
@@ -416,7 +724,7 @@
                     <h3>Documentation</h3>
                     <ul class="footer-links">
                         <li><a href="#process">Work Process</a></li>
-                        <li><a href="#samples">Sample Presentations</a></li>
+                        <li><a href="#ecosystem">Our Ecosystem</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -435,7 +743,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/formats-selector.js"></script>
-    <script src="js/samples-viewer.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -445,9 +752,59 @@
                 FormatSelector.init();
             }
             
-            if (typeof SampleSystem !== 'undefined') {
-                SampleSystem.init();
+            // Обновление навигации для кнопки "View Our Ecosystem"
+            document.getElementById('view-ecosystem-btn').addEventListener('click', function() {
+                document.getElementById('ecosystem').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Анимация карточек при появлении
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 200);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Добавляем начальные стили и наблюдаем
+            document.querySelectorAll('.direction-card').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                card.style.transitionDelay = (index * 0.2) + 's';
+                observer.observe(card);
+            });
+            
+            // Анимация для integrated solution
+            const integrated = document.querySelector('.integrated-solution');
+            if (integrated) {
+                integrated.style.opacity = '0';
+                integrated.style.transform = 'translateY(30px)';
+                integrated.style.transition = 'all 0.6s ease 0.6s';
+                
+                const integratedObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                            integratedObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                integratedObserver.observe(integrated);
             }
+            
+            console.log('✅ Expert Directions block loaded');
         });
     </script>
 </body>

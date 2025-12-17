@@ -1123,4 +1123,99 @@ section {
         padding: 20px 0;
         page-break-inside: avoid;
     }
+}/* ===== СТИЛИ ДЛЯ КАРТОЧЕК КВЕСТОВ ===== */
+
+.samples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
+
+.sample-card {
+    background: linear-gradient(145deg, #1e293b, rgba(30, 41, 59, 0.8));
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-left: 4px solid;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.sample-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sample-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.sample-preview img {
+    transition: transform 0.5s ease;
+    border-radius: 8px;
+}
+
+.sample-card:hover .sample-preview img {
+    transform: scale(1.05);
+}
+
+/* Пульсация для инсайт-бейджей */
+@keyframes pulse-badge {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.insight-badge {
+    animation: pulse-badge 2s infinite;
+    font-weight: bold;
+    margin: 10px 0;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+}
+
+/* Анимация для кнопок */
+.btn-view-sample {
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    border: 2px solid transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-view-sample:hover {
+    transform: translateX(5px);
+    opacity: 0.95;
+}
+
+/* Цвета для квестов */
+.sample-card:nth-child(1) { border-left-color: #ef4444; }
+.sample-card:nth-child(2) { border-left-color: #f59e0b; }
+.sample-card:nth-child(3) { border-left-color: #10b981; }
+.sample-card:nth-child(4) { border-left-color: #3b82f6; }
+.sample-card:nth-child(5) { border-left-color: #8b5cf6; }
+
+.sample-card:nth-child(1) h3 { color: #ef4444; }
+.sample-card:nth-child(2) h3 { color: #f59e0b; }
+.sample-card:nth-child(3) h3 { color: #10b981; }
+.sample-card:nth-child(4) h3 { color: #3b82f6; }
+.sample-card:nth-child(5) h3 { color: #8b5cf6; }
+
+.sample-card:nth-child(1) .btn-view-sample { border-color: #ef4444; color: #ef4444; }
+.sample-card:nth-child(2) .btn-view-sample { border-color: #f59e0b; color: #f59e0b; }
+.sample-card:nth-child(3) .btn-view-sample { border-color: #10b981; color: #10b981; }
+.sample-card:nth-child(4) .btn-view-sample { border-color: #3b82f6; color: #3b82f6; }
+.sample-card:nth-child(5) .btn-view-sample { border-color: #8b5cf6; color: #8b5cf6; }
