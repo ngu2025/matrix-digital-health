@@ -33,7 +33,8 @@
             background: 
                 radial-gradient(circle at 20% 50%, rgba(0, 220, 130, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(56, 178, 172, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
             z-index: 0;
         }
 
@@ -126,9 +127,11 @@
         .direction-footer {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .current-badge {
@@ -137,6 +140,11 @@
             font-size: 0.75rem;
             font-weight: 700;
             letter-spacing: 0.5px;
+            flex-shrink: 0;
+            white-space: nowrap;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .direction-link {
@@ -147,6 +155,10 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+            max-width: 70%;
+            text-align: right;
         }
 
         .direction-link:hover {
@@ -170,7 +182,7 @@
         .integrated-content h3 {
             font-size: 1.75rem;
             margin-bottom: 10px;
-            background: linear-gradient(135deg, #00dc82, #38b2ac, #8b5cf6);
+            background: linear-gradient(135deg, #00dc82, #38b2ac, #8b5cf6, #F59E0B);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -217,6 +229,12 @@
         }
 
         /* АДАПТИВНОСТЬ */
+        @media (max-width: 1200px) {
+            .direction-link {
+                max-width: 60%;
+            }
+        }
+        
         @media (max-width: 992px) {
             .directions-grid {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -232,6 +250,15 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            
+            .direction-footer {
+                gap: 8px;
+            }
+            
+            .direction-link {
+                max-width: 100%;
+                text-align: left;
             }
         }
 
@@ -249,15 +276,33 @@
             }
         }
 
+        @media (max-width: 600px) {
+            .direction-footer {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+            
+            .current-badge {
+                align-self: flex-start;
+                margin-bottom: 5px;
+                max-width: 100%;
+            }
+            
+            .direction-link {
+                align-self: flex-start;
+                max-width: 100%;
+                text-align: left;
+            }
+        }
+
         @media (max-width: 480px) {
             .directions-grid {
                 grid-template-columns: 1fr;
             }
             
-            .direction-footer {
-                flex-direction: column;
-                gap: 15px;
-                align-items: flex-start;
+            .direction-card {
+                padding: 20px;
             }
         }
     </style>
@@ -510,7 +555,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Our Expert Business Directions</h2>
-                <p class="section-subtitle">Three specialized platforms for comprehensive digital transformation</p>
+                <p class="section-subtitle">Four specialized platforms for comprehensive digital transformation</p>
             </div>
             
             <div class="directions-grid">
@@ -594,13 +639,41 @@
                         </a>
                     </div>
                 </div>
+                
+                <!-- DIRECTION 4: BRAND DNA AMPLIFICATION (НОВАЯ КАРТОЧКА) -->
+                <div class="direction-card" style="border-color: #F59E0B;">
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">
+                        🧬
+                    </div>
+                    <div class="direction-content">
+                        <h3 style="color: #F59E0B;">Brand DNA Amplification</h3>
+                        <p class="direction-description">
+                            AI-powered brand consistency & content strategy for premium wellness businesses. 
+                            Get complete content system with tone, visuals, and calendar.
+                        </p>
+                        <div class="direction-features">
+                            <span>AI Brand Analysis</span>
+                            <span>Content Strategy</span>
+                            <span>Visual Guidelines</span>
+                            <span>3-Month Plan</span>
+                        </div>
+                    </div>
+                    <div class="direction-footer">
+                        <a href="https://ngu2025.github.io/brand-dna-amplification/" 
+                           target="_blank" 
+                           class="direction-link" 
+                           style="color: #F59E0B;">
+                            View Case Study & Pricing →
+                        </a>
+                    </div>
+                </div>
             </div>
             
             <!-- INTEGRATED SOLUTION -->
             <div class="integrated-solution">
                 <div class="integrated-content">
                     <h3>Need Integrated Strategy?</h3>
-                    <p>Combine multiple services for maximum impact. Get personalized roadmap for your business growth.</p>
+                    <p>Combine multiple services for maximum impact. Get personalized roadmap for your business growth across all four platforms.</p>
                     <a href="#contact" class="btn-integrated">
                         Get Custom Strategy →
                     </a>
@@ -804,7 +877,7 @@
                 integratedObserver.observe(integrated);
             }
             
-            console.log('✅ Expert Directions block loaded');
+            console.log('✅ Expert Directions block loaded (now with 4 directions)');
         });
     </script>
 </body>

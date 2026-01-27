@@ -1,0 +1,100 @@
+/* Additional Landing Page Styles */
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(40px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-4 { margin-top: 4rem; }
+.mb-4 { margin-bottom: 4rem; }
+.p-4 { padding: 4rem; }
+
+/* Hover effects enhancement */
+.conversion-card:hover,
+.country-card:hover,
+.diagnosis-pillar:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Mobile menu (for future enhancement) */
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+    
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--matrix-dark);
+        flex-direction: column;
+        padding: 1rem;
+        border-top: 1px solid var(--matrix-border);
+    }
+    
+    .nav.active {
+        display: flex;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .cta-buttons,
+    .payment-confirmation {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* Selection styles */
+::selection {
+    background: var(--matrix-primary);
+    color: var(--matrix-darker);
+}
+
+::-moz-selection {
+    background: var(--matrix-primary);
+    color: var(--matrix-darker);
+}
