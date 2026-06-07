@@ -15,7 +15,7 @@
     <meta property="og:type" content="website">
     
     <style>
-        /* ===== СТИЛИ ДЛЯ НОВОГО БЛОКА "OUR EXPERT DIRECTIONS" ===== */
+        /* ===== СТИЛИ ДЛЯ БЛОКА "OUR EXPERT DIRECTIONS" ===== */
         .expert-directions-section {
             padding: 100px 0;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -34,7 +34,8 @@
                 radial-gradient(circle at 20% 50%, rgba(0, 220, 130, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(56, 178, 172, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 70% 70%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 70% 70%, rgba(245, 158, 11, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 30% 30%, rgba(236, 72, 154, 0.05) 0%, transparent 50%);
             z-index: 0;
         }
 
@@ -166,7 +167,6 @@
             opacity: 0.9;
         }
 
-        /* ИНТЕГРИРОВАННОЕ РЕШЕНИЕ */
         .integrated-solution {
             background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -182,7 +182,7 @@
         .integrated-content h3 {
             font-size: 1.75rem;
             margin-bottom: 10px;
-            background: linear-gradient(135deg, #00dc82, #38b2ac, #8b5cf6, #F59E0B);
+            background: linear-gradient(135deg, #00dc82, #38b2ac, #8b5cf6, #F59E0B, #EC489A);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -228,7 +228,6 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* АДАПТИВНОСТЬ */
         @media (max-width: 1200px) {
             .direction-link {
                 max-width: 60%;
@@ -369,7 +368,7 @@
             </div>
             
             <div class="formats-grid">
-                <!-- Format 1 -->
+                <!-- Format 1-10 (оставь как есть, они не менялись) -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">⚛️</div>
@@ -384,7 +383,6 @@
                     <button class="btn-format-select" data-format="quantum-arch">Select This Format</button>
                 </div>
                 
-                <!-- Format 2 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">🔍</div>
@@ -398,7 +396,6 @@
                     <button class="btn-format-select" data-format="quantum-scan">Select This Format</button>
                 </div>
                 
-                <!-- Format 3 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">📊</div>
@@ -412,7 +409,6 @@
                     <button class="btn-format-select" data-format="quantum-flow">Select This Format</button>
                 </div>
                 
-                <!-- Format 4 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">⚡</div>
@@ -426,7 +422,6 @@
                     <button class="btn-format-select" data-format="quantum-perf">Select This Format</button>
                 </div>
                 
-                <!-- Format 5 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">💎</div>
@@ -440,7 +435,6 @@
                     <button class="btn-format-select" data-format="quantum-asset">Select This Format</button>
                 </div>
                 
-                <!-- Format 6 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">🧹</div>
@@ -454,7 +448,6 @@
                     <button class="btn-format-select" data-format="quantum-audit">Select This Format</button>
                 </div>
                 
-                <!-- Format 7 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">📈</div>
@@ -468,7 +461,6 @@
                     <button class="btn-format-select" data-format="quantum-gap">Select This Format</button>
                 </div>
                 
-                <!-- Format 8 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">🚀</div>
@@ -482,7 +474,6 @@
                     <button class="btn-format-select" data-format="quantum-growth">Select This Format</button>
                 </div>
                 
-                <!-- Format 9 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">⚡</div>
@@ -497,7 +488,6 @@
                     <button class="btn-format-select" data-format="quantum-sprint">Select This Format</button>
                 </div>
                 
-                <!-- Format 10 -->
                 <div class="format-card">
                     <div class="format-header">
                         <div class="format-icon">🌌</div>
@@ -550,121 +540,92 @@
         </div>
     </section>
 
-    <!-- ===== НОВЫЙ БЛОК: OUR EXPERT BUSINESS DIRECTIONS ===== -->
+    <!-- ===== OUR EXPERT BUSINESS DIRECTIONS (6 КАРТОЧЕК) ===== -->
     <section class="expert-directions-section" id="ecosystem">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Our Expert Business Directions</h2>
-                <p class="section-subtitle">Four specialized platforms for comprehensive digital transformation</p>
+                <p class="section-subtitle">Six specialized platforms for comprehensive digital transformation</p>
             </div>
             
             <div class="directions-grid">
                 <!-- DIRECTION 1: QUANTUM WEBSITE ANALYSIS -->
                 <div class="direction-card" style="border-color: #00dc82;">
-                    <div class="direction-icon" style="background: linear-gradient(135deg, #00dc82, #00b86c);">
-                        ⚡
-                    </div>
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #00dc82, #00b86c);">⚡</div>
                     <div class="direction-content">
                         <h3 style="color: #00dc82;">Quantum Website Analysis</h3>
-                        <p class="direction-description">
-                            Advanced 5-layer technical audit revealing hidden growth opportunities. 
-                            Pay only after receiving detailed analysis.
-                        </p>
-                        <div class="direction-features">
-                            <span>5-Layer Audit</span>
-                            <span>Performance Metrics</span>
-                            <span>Risk-Free Payment</span>
-                        </div>
+                        <p class="direction-description">Advanced 5-layer technical audit revealing hidden growth opportunities. Pay only after receiving detailed analysis.</p>
+                        <div class="direction-features"><span>5-Layer Audit</span><span>Performance Metrics</span><span>Risk-Free Payment</span></div>
                     </div>
                     <div class="direction-footer">
-                        <div class="current-badge" style="background: #00dc82; color: #020617;">
-                            You are here
-                        </div>
-                        <a href="#formats" class="direction-link" style="color: #00dc82;">
-                            Choose Analysis Format →
-                        </a>
+                        <div class="current-badge" style="background: #00dc82; color: #020617;">You are here</div>
+                        <a href="#formats" class="direction-link" style="color: #00dc82;">Choose Analysis Format →</a>
                     </div>
                 </div>
                 
                 <!-- DIRECTION 2: DIGITAL ENGINEERING SOLUTIONS -->
                 <div class="direction-card" style="border-color: #38b2ac;">
-                    <div class="direction-icon" style="background: linear-gradient(135deg, #38b2ac, #319795);">
-                        🔧
-                    </div>
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #38b2ac, #319795);">🔧</div>
                     <div class="direction-content">
                         <h3 style="color: #38b2ac;">Digital Engineering Solutions</h3>
-                        <p class="direction-description">
-                            Complete digital transformation services: SEO optimization, content engineering, 
-                            GEO-targeting and AI-media solutions.
-                        </p>
-                        <div class="direction-features">
-                            <span>SEO & Content</span>
-                            <span>AI Solutions</span>
-                            <span>GEO Optimization</span>
-                        </div>
+                        <p class="direction-description">Complete digital transformation services: SEO optimization, content engineering, GEO-targeting and AI-media solutions.</p>
+                        <div class="direction-features"><span>SEO & Content</span><span>AI Solutions</span><span>GEO Optimization</span></div>
                     </div>
                     <div class="direction-footer">
-                        <a href="https://ngu2025.github.io/digitaleng-site/" 
-                           target="_blank" 
-                           class="direction-link" 
-                           style="color: #38b2ac;">
-                            Explore All Services →
-                        </a>
+                        <a href="https://ngu2025.github.io/digitaleng-site/" target="_blank" class="direction-link" style="color: #38b2ac;">Explore All Services →</a>
                     </div>
                 </div>
                 
                 <!-- DIRECTION 3: AI MARKET INTELLIGENCE -->
                 <div class="direction-card" style="border-color: #8b5cf6;">
-                    <div class="direction-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
-                        🧠
-                    </div>
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">🧠</div>
                     <div class="direction-content">
                         <h3 style="color: #8b5cf6;">AI Market Intelligence</h3>
-                        <p class="direction-description">
-                            AI-powered market analysis with payment after results. 
-                            Get demo report first — then decide to pay.
-                        </p>
-                        <div class="direction-features">
-                            <span>Market Research</span>
-                            <span>Competitive Analysis</span>
-                            <span>Zero Risk Model</span>
-                        </div>
+                        <p class="direction-description">AI-powered market analysis with payment after results. Get demo report first — then decide to pay.</p>
+                        <div class="direction-features"><span>Market Research</span><span>Competitive Analysis</span><span>Zero Risk Model</span></div>
                     </div>
                     <div class="direction-footer">
-                        <a href="https://ngu2025.github.io/landing-ai-solutions/" 
-                           target="_blank" 
-                           class="direction-link" 
-                           style="color: #8b5cf6;">
-                            Request Demo Report →
-                        </a>
+                        <a href="https://ngu2025.github.io/landing-ai-solutions/" target="_blank" class="direction-link" style="color: #8b5cf6;">Request Demo Report →</a>
                     </div>
                 </div>
                 
-                <!-- DIRECTION 4: BRAND DNA AMPLIFICATION (НОВАЯ КАРТОЧКА) -->
+                <!-- DIRECTION 4: BRAND DNA AMPLIFICATION -->
                 <div class="direction-card" style="border-color: #F59E0B;">
-                    <div class="direction-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">
-                        🧬
-                    </div>
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">🧬</div>
                     <div class="direction-content">
                         <h3 style="color: #F59E0B;">Brand DNA Amplification</h3>
-                        <p class="direction-description">
-                            AI-powered brand consistency & content strategy for premium wellness businesses. 
-                            Get complete content system with tone, visuals, and calendar.
-                        </p>
-                        <div class="direction-features">
-                            <span>AI Brand Analysis</span>
-                            <span>Content Strategy</span>
-                            <span>Visual Guidelines</span>
-                            <span>3-Month Plan</span>
-                        </div>
+                        <p class="direction-description">AI-powered brand consistency & content strategy for premium wellness businesses. Get complete content system with tone, visuals, and calendar.</p>
+                        <div class="direction-features"><span>AI Brand Analysis</span><span>Content Strategy</span><span>Visual Guidelines</span><span>3-Month Plan</span></div>
                     </div>
                     <div class="direction-footer">
-                        <a href="https://ngu2025.github.io/brand-dna-amplification/" 
-                           target="_blank" 
-                           class="direction-link" 
-                           style="color: #F59E0B;">
-                            View Case Study & Pricing →
-                        </a>
+                        <a href="https://ngu2025.github.io/brand-dna-amplification/" target="_blank" class="direction-link" style="color: #F59E0B;">View Case Study & Pricing →</a>
+                    </div>
+                </div>
+                
+                <!-- DIRECTION 5: CONTENT → TRAFFIC ENGINE -->
+                <div class="direction-card" style="border-color: #EC489A;">
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #EC489A, #DB2777);">📈</div>
+                    <div class="direction-content">
+                        <h3 style="color: #EC489A;">Content → Traffic Engine</h3>
+                        <p class="direction-description">Your content becomes a traffic machine. We transform branded visuals into guaranteed audience growth. No guesswork — just measurable results.</p>
+                        <div class="direction-features"><span>Traffic Generation</span><span>Branded Content</span><span>Audience Growth</span><span>Analytics-Driven</span></div>
+                    </div>
+                    <div class="direction-footer">
+                        <a href="https://ngu2025.github.io/content-traffic-library/" target="_blank" class="direction-link" style="color: #EC489A;">View Content Library →</a>
+                    </div>
+                </div>
+
+                <!-- DIRECTION 6: SEO AUDIT + TRAFFIC LEADS -->
+                <div class="direction-card" style="border-color: #F43F5E;">
+                    <div class="direction-icon" style="background: linear-gradient(135deg, #F43F5E, #E11D48);">🔍</div>
+                    <div class="direction-content">
+                        <h3 style="color: #F43F5E;">SEO Audit + Traffic Leads</h3>
+                        <p class="direction-description">5-minute automated SEO audit for Google & Yandex. Get clear score (0–20), prioritized checklist, and a plan to fix errors. Then we bring targeted traffic.</p>
+                        <div class="direction-features"><span>Free Audit</span><span>Google + Yandex</span><span>Prioritized Fixes</span><span>Traffic Package</span></div>
+                    </div>
+                    <div class="direction-footer">
+                        <div class="current-badge" style="background: #F43F5E; color: #FFFFFF;">NEW</div>
+                        <a href="#seo-audit" class="direction-link" style="color: #F43F5E;">Request Free SEO Audit →</a>
                     </div>
                 </div>
             </div>
@@ -673,10 +634,8 @@
             <div class="integrated-solution">
                 <div class="integrated-content">
                     <h3>Need Integrated Strategy?</h3>
-                    <p>Combine multiple services for maximum impact. Get personalized roadmap for your business growth across all four platforms.</p>
-                    <a href="#contact" class="btn-integrated">
-                        Get Custom Strategy →
-                    </a>
+                    <p>Combine multiple services for maximum impact. Get personalized roadmap for your business growth across all six platforms.</p>
+                    <a href="#contact" class="btn-integrated">Get Custom Strategy →</a>
                 </div>
                 <div class="integrated-badges">
                     <span class="badge">Cross-Platform</span>
@@ -687,46 +646,32 @@
         </div>
     </section>
 
+    
+
     <section class="pricing-summary" id="pricing">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Clear Pricing Structure</h2>
                 <p class="section-subtitle">Fixed prices for each format, no hidden costs</p>
             </div>
-            
             <div class="pricing-overview">
                 <div class="price-tier">
                     <h3>Quick Analysis</h3>
                     <div class="price-range">$97 - $197</div>
                     <p>Single format deep dive</p>
-                    <ul>
-                        <li>Quantum Architecture Audit - $97</li>
-                        <li>Competitor Quantum Scan - $97</li>
-                        <li>Conversion Flow Quantum Analysis - $147</li>
-                        <li>Performance Quantum Dashboard - $197</li>
-                    </ul>
+                    <ul><li>Quantum Architecture Audit - $97</li><li>Competitor Quantum Scan - $97</li><li>Conversion Flow Quantum Analysis - $147</li><li>Performance Quantum Dashboard - $197</li></ul>
                 </div>
-                
                 <div class="price-tier featured">
                     <h3>Advanced Analysis</h3>
                     <div class="price-range">$247 - $397</div>
                     <p>Comprehensive multi-format analysis</p>
-                    <ul>
-                        <li>Hidden Asset Quantum Discovery - $247</li>
-                        <li>Marketing Efficiency Quantum Audit - $297</li>
-                        <li>Performance Gap Quantum Analysis - $347</li>
-                        <li>Quantum Growth Roadmap - $397</li>
-                    </ul>
+                    <ul><li>Hidden Asset Quantum Discovery - $247</li><li>Marketing Efficiency Quantum Audit - $297</li><li>Performance Gap Quantum Analysis - $347</li><li>Quantum Growth Roadmap - $397</li></ul>
                 </div>
-                
                 <div class="price-tier">
                     <h3>Complete Solutions</h3>
                     <div class="price-range">$497 - $997</div>
                     <p>Full transformation packages</p>
-                    <ul>
-                        <li>Quantum Strategy Sprint - $497</li>
-                        <li>Quantum Marketing Transformation - $997</li>
-                    </ul>
+                    <ul><li>Quantum Strategy Sprint - $497</li><li>Quantum Marketing Transformation - $997</li></ul>
                 </div>
             </div>
         </div>
@@ -737,10 +682,7 @@
             <div class="payment-content">
                 <div class="payment-info">
                     <h2 class="payment-title">💎 Global USDT (TRC20) Payments</h2>
-                    <p class="payment-description">
-                        Simple, secure, borderless payments. No registration, no bureaucracy.
-                    </p>
-                    
+                    <p class="payment-description">Simple, secure, borderless payments. No registration, no bureaucracy.</p>
                     <div class="usdt-address">
                         <label>Send USDT to this address:</label>
                         <div class="address-display">
@@ -749,12 +691,8 @@
                         </div>
                         <small>Network: TRC20 (Tron) | Minimum: $97</small>
                     </div>
-                    
-                    <div class="payment-note">
-                        <p>💡 <strong>Note:</strong> Payment follows delivery of your website analysis presentation.</p>
-                    </div>
+                    <div class="payment-note"><p>💡 <strong>Note:</strong> Payment follows delivery of your website analysis presentation.</p></div>
                 </div>
-                
                 <div class="qr-container">
                     <div class="qr-code">
                         <img src="assets/images/qr-usdt.png" alt="USDT QR Code" onerror="this.style.display='none'">
@@ -766,119 +704,55 @@
     </section>
 
     <footer class="main-footer" id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Technical Expert</h3>
-                    <div class="expert-info">
-                        <p><strong>Gennady Konstantinov</strong></p>
-                        <p>Author and developer of Project "Digital Technologies: Market Analysis and Matrix Tools"</p>
-                        <p class="tagline">Where data becomes strategy</p>
-                        <div class="contact-details">
-                            <p>📧 digitaleng.contact@gmail.com</p>
-                            <p>📱 Telegram: @DigitalEng_Support</p>
-                            <p>🌐 Matrix Methodology Overview</p>
-                        </div>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Technical Expert</h3>
+                <div class="expert-info">
+                    <p><strong>Gennady Konstantinov</strong></p>
+                    <p>Author and developer of Project "Digital Technologies: Market Analysis and Matrix Tools"</p>
+                    <p class="tagline">Where data becomes strategy</p>
+                    <div class="contact-details">
+                        <p>📧 digitaleng.contact@gmail.com</p>
+                        <p>📱 Telegram: @DigitalEng_Support</p>
+                        <p>🌐 Matrix Methodology Overview</p>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Analysis Formats</h3>
-                    <ul class="footer-links">
-                        <li><a href="#formats">Quantum Architecture Audit</a></li>
-                        <li><a href="#formats">Competitor Quantum Scan</a></li>
-                        <li><a href="#formats">Conversion Flow Quantum Analysis</a></li>
-                        <li><a href="#formats">Performance Quantum Dashboard</a></li>
-                        <li><a href="#formats">Hidden Asset Quantum Discovery</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Documentation</h3>
-                    <ul class="footer-links">
-                        <li><a href="#process">Work Process</a></li>
-                        <li><a href="#ecosystem">Our Ecosystem</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Matrix Digital Health. All rights reserved.</p>
-                <p>Professional quantum analysis services.</p>
+            <div class="footer-section">
+                <h3>Analysis Formats</h3>
+                <ul class="footer-links">
+                    <li><a href="#formats">Quantum Architecture Audit</a></li>
+                    <li><a href="#formats">Competitor Quantum Scan</a></li>
+                    <li><a href="#formats">Conversion Flow Quantum Analysis</a></li>
+                    <li><a href="#formats">Performance Quantum Dashboard</a></li>
+                    <li><a href="#formats">Hidden Asset Quantum Discovery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Documentation</h3>
+                <ul class="footer-links">
+                    <li><a href="#process">Work Process</a></li>
+                    <li><a href="#ecosystem">Our Ecosystem</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
-
-    <div id="modal-container"></div>
-    <div id="samples-modal-container"></div>
-
-    <script src="js/main.js"></script>
-    <script src="js/formats-selector.js"></script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('✅ Matrix Digital Health Quantum Analysis initialized');
-            
-            if (typeof FormatSelector !== 'undefined') {
-                FormatSelector.init();
-            }
-            
-            // Обновление навигации для кнопки "View Our Ecosystem"
-            document.getElementById('view-ecosystem-btn').addEventListener('click', function() {
-                document.getElementById('ecosystem').scrollIntoView({ behavior: 'smooth' });
-            });
-            
-            // Анимация карточек при появлении
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }, index * 200);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            // Добавляем начальные стили и наблюдаем
-            document.querySelectorAll('.direction-card').forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                card.style.transitionDelay = (index * 0.2) + 's';
-                observer.observe(card);
-            });
-            
-            // Анимация для integrated solution
-            const integrated = document.querySelector('.integrated-solution');
-            if (integrated) {
-                integrated.style.opacity = '0';
-                integrated.style.transform = 'translateY(30px)';
-                integrated.style.transition = 'all 0.6s ease 0.6s';
-                
-                const integratedObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                            integratedObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1 });
-                
-                integratedObserver.observe(integrated);
-            }
-            
-            console.log('✅ Expert Directions block loaded (now with 4 directions)');
-        });
-    </script>
-</body>
-</html>
+        
+        <!-- QUANTUM TERM EXPLANATION (MARKETING METAPHOR) -->
+        <div class="footer-quantum-note" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.75rem; color: #64748b; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <p style="margin-bottom: 8px;">
+                <span style="font-weight: 600; color: #94a3b8;">About the term "Quantum"</span><br>
+                "Quantum" in our analysis names is a marketing metaphor. It represents our multi‑layer, 
+                in‑depth approach — combining technical SEO, content strategy, and traffic analytics. 
+                No quantum physics involved. Just professional, comprehensive analysis.
+            </p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Matrix Digital Health. All rights reserved.</p>
+            <p>Professional quantum analysis services.</p>
+        </div>
+    </div>
+</footer>
